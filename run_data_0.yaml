@@ -1,0 +1,61 @@
+# Optional Data
+Run_id: 0
+Trial_num: 7                                       # integer from 1 to 100, refer to NTRIAL
+Target_track_num: 2                                # integer from 0 to 50, refer to M
+Intelligence_detection_num: 3                      # integer from 0 to 100, refer to N
+Output_level: 2                                    # integer from 1 to 5, refer to IOPT
+Intelligence_time_option: 0                        # integer -1, 0, 1, refer to NOPT
+Random_seed: 1                                     # 1-10^10, refer to NCYCR
+Evasion_option: 5                                  # integer from 1 to 6, refer to NEVD
+Intelligence_data_option: 4                        # integer from 1 to 5, refer to NCOMP
+Intelligence_error_distribution_option: 4          # integer from 1 to 4, refer to INRAND
+Number_of_changes_to_situation: 1                  # integer from 0 to 27, and 99, refer to NC
+Run_summary_suppression: 0                         # bool 0 and 1, refer to NSUP
+Random_target_track: 0                             # bool 0 and 1, refer to NRTT
+Convergence_zone_intelligence: 1                   # bool 0 and 1, refer to ICZ
+
+# Situation Data
+Nominal_time_to_end_the_trial: 96.0                # unit in hours, refer to TEND
+Communication_interval: 0.0                        # unit in hours, 0-TEND, refer to CINT
+X_target_init: 0.0                                 # unit in miles, refer to XTI
+Y_target_init: 500.0                               # unit in miles, refer to YTI
+Fixed_intelligence_delay: 1.2                      # unit in hours, refer to TL
+Intelligence_detection_interval: 4.0               # unit in hours, refer to TINT
+Evasion_time: 2.5                                  # unit in hours, refer to ETIME
+Search_speed: 13.0                                 # unit in kts (knots), refer to SS
+Transit_speed: 20.0                                # unit in kts (knots), refer to SA
+Attacker_initial_speed: 0.1                        # unit in kts (knots), refer to VI
+Attacker_initial_course: 0.0                       # unit in degrees, -180 to 180, refer to CAI
+Search_leg_time: 2.5                               # unit in hours, refer to SI
+Ambient_noise_level: -42.0                         # unit in dB, refer to AMB
+STD_of_propagation_loss: 9.0                       # unit in dB, refer to SIGMA
+Target_evasion_angle: 60.0                         # unit in degrees, refer to EVANG
+Evasion_speed_increment: -3.0                      # unit in kts (knots), refer to EVSPD
+Intelligence_speed_error: 3.0                      # unit in kts (knots), refer to SE
+Intelligence_course_error: 30.0                    # unit in degrees, refer to CE
+Safety_factor: 3.5                                 # unit in kts (knots), refer to SAF
+Attacker_sonar_gain: 36.0                          # unit in dB, refer to GAINA
+Target_sonar_gain: 134.0                            # unit in dB, refer to GAINT
+Convergence_zone_central_radius: 40.0              # unit in miles, refer to CZR
+Convergence_zone_half_width: 7.0                   # unit in miles, refer to CZW
+Convergence_zone_speed_error: 4.0                  # unit in kts (knots), refer to CZSE
+Convergence_zone_course_error: 15.0                # unit in degrees, refer to CZCE
+Convergence_zone_bearing_error: 2.5                # unit in degrees, used for position estimation, refer to CZBE
+Convergence_zone_range_error: 5.0                  # unit in miles, used for position estimation, refer to CZRE
+
+# Target Track Data
+Target_base_course: [180.0, 180.0]                 # unit in degrees, list for multiple legs, -180 to 180, refer to CST
+Target_base_speed: [16.0, 16.0]                    # unit in kts (knots), refer to SPT
+Terminal_time: [0.1, 200.0]                        # unit in hours, refer to TT
+# Intelligence_detection_prob: [0.0, 25.0]         # This is the sample input from the paper.
+                                                   # It should be 0-1, refer to PINT
+Intelligence_detection_prob: [0.0, 0.25]           # We change the second number to 0.25
+Surveillance_position_x_error: [100.0, 25.0]       # unit in miles, refer to SPAX
+Surveillance_position_y_error: [0.0, 25.0]         # unit in miles, refer to SPAY
+
+#Intelligence Time Data for Surveillance System
+Intelligence_detection_time: [1.0, 22.5, 47.0]          # unit in hours, refer to TI
+Intelligence_detection_range_error: [13.0, 21.0, 9.0]   # unit in miles, refer to RINP
+Intelligence_bearing_estimate: [25.0, 84.0, 156.0]      # position bearing, unit in degrees, -180 to 180, refer to BINP
+Intelligence_detection_course_estimate: [168.0, 195.0, 174.0]   # unit in degrees, -180 to 180, refer to CINP
+Intelligence_detection_speed_estimate: [13.0, 18.0, 17.0]       # unit in kts, refer to SINP
